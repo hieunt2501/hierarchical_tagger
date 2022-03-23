@@ -64,7 +64,7 @@ def perfect_align(t, T, insertions_allowed=0,
             i -= 1
         if is_insert:
             # if al
-            alignment.append([f'APPEND_{T[j:k]}', T[j:k]])
+            alignment.append([f'APPEND_{T[j:k]}', t[i]])
         elif t[i] == T[j:k]:
             alignment.append(['KEEP', t[i]])
         elif t[i] != T[j:k] and T[j:k] == "":
