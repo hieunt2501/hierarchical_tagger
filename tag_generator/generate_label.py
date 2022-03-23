@@ -39,9 +39,11 @@ def process_labels(correct, incorrect):
             final_label.append(label)
 
     if len(final_label) == len(incorrect) + 1:
-        if final_label[0][1] != final_label[1][1]:
+        appended_char = incorrect[final_label[0][1][1]]
+        if appended_char != final_label[1][1]:
             print(f"Length labels not equal for sentence: {incorrect}")
             raise Exception
+
 
     elif len(final_label) != len(incorrect):
         print(f"Length labels not equal for sentence: {incorrect}")
